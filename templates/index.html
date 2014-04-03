@@ -1,0 +1,16 @@
+{% load dajaxice_templatetags %}
+
+<html>
+  <head>
+    <title>My base template</title>
+    {% dajaxice_js_import %}
+  </head>
+  <body>
+  <button onclick="Dajaxice.examples.views.sayhello(my_js_callback);">Hello</button>
+  <script>
+  function my_js_callback(data){
+    alert(data.message);
+  }
+  </script>
+  </body>
+</html>
